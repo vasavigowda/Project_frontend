@@ -1,4 +1,9 @@
 .socialicon{
     padding: 2px;
     width:300px;
+    background-color: rgb(190, 114, 130);
+    
+}
+.logncontainer{
+    margin-top: 200px;
 }

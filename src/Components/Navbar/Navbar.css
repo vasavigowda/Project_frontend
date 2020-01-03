@@ -1,31 +1,55 @@
+.navbar{
+  position: fixed;
+	top: 0;
+  background-color:white;
+  width: 100%;
+
+  z-index:2;
+}
 .logo{
   width:50px;
   height:50px;
- 
+/* margin-right:30px */
 }
-.navbar{
-    background-color: rgb(134, 142, 158);
-    padding: 10px;
-
+.logoname{
+ 
+  color: crimson;
+ font-size: 24px;
+ margin-left:-66px;
+  
+}
+.data{
+  margin-left: -75px;
 }
 .nav1{
-    color: crimson;
+  color:blue;
     margin: 30px;
     text-decoration: none;
+    font-size:20px;
 }
-.container {
-     display: inline-block;
-    cursor: pointer;
-    padding-left:5px;
-  
-    
-  }
-   
-  .bar1, .bar2, .bar3 {
+span{
+  width:10px;
+}
+.search{
+  margin-left:56px;
+}
+.bar{
+  margin-left:20px;
+    margin: 6px -34px;
+}
+  /* .bar1, .bar2, .bar3 {
     width: 35px;
     height: 3px;
     background-color: #333;
     margin: 6px 7px;
-  
+  } */
+  .lognbtn{
+    margin:5px;
+    background-color:rgb(226, 134, 152);
   }
+  .signbtn{
+    margin:5px;
+    background-color:rgb(226, 134, 152);
+  }
+  
   
