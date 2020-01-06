@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './image2.jpeg';
+import logo from '../Images/image2.jpeg';
 import './Footer.css';
 import { SocialIcon } from 'react-social-icons';
 
@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
    return (
     <div className="row footer">
-     <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1">
      <img src={logo} className="logo"></img>
      </div>
      <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -43,7 +43,7 @@ class Footer extends Component {
     
     
      </div>
-     <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+     <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
   
      <SocialIcon url="http://facebook.com/jaketrent"  className="icon1"/>
      <SocialIcon url="http://twitter.com/jaketrent" className="icon1"/>

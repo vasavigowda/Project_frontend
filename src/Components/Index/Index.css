@@ -12,18 +12,21 @@ h6{
     width:50px;
     height:50px;
 }
+.abtimg{
+    width:300px;
+    height:200px;
+}
 .logoname1{
     color: crimson;
  font-size: 24px;
 }
-#product{
-    margin-top:500px;
+.product{
+    margin-top:300px;
 }
 .container1{
-    margin-bottom: 500px;
+   
     margin-top:100px;   
 }
-.container2{
-    margin-top:300 px;
-  
-}
+/* .aboutus{
+    margin-top:561px;
+} */

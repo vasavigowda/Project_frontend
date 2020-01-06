@@ -1,9 +1,20 @@
 .socialicon{
     padding: 2px;
-    width:300px;
-    background-color: rgb(190, 114, 130);
+    width:250px;
+    height: 60px;
+    background-color: rgb(53, 53, 216);
+    border-radius: 10px;
     
 }
-.logncontainer{
-    margin-top: 200px;
+.googleicon{
+    margin-top: 100px;
+    width:250px;
+    height: 60px;
+    border-radius: 10px;
+
 }
+
+/* .fbicon{
+    width:10px;
+    height: 10px;
+} */

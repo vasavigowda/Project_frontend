@@ -1,8 +1,11 @@
 .footer{
     /* position: fixed; */
      bottom: 0;
-    background-color:white;
+    background-color:#777;
     width: 100%;
+  }
+  h6{
+    color: black;
   }
 .icon1{
     width:20px;
