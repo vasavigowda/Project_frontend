@@ -1,6 +1,6 @@
 #register
 {
-    width: 300px;
+    width: 400px;
   border: 1px solid #d6d7da;
   padding: 0px 15px 15px 15px;
   border-radius: 5px;
@@ -10,20 +10,23 @@
   font-size: 14px;
   background: #ffffff;
   margin: 100px auto;
+  margin-left:856px;
 }
 form label, form input {
   display: block;
-  width: 90%
+  width: 64%;
 }
 form input {
-  padding: 10px;
+  padding: 8px;
   border: solid 1px #BDC7D8;
+  margin-left: 98px;
 }
 .button {
   background-color: #00BFFF;
   border-color: #3ac162;
   font-weight: bold;
-  padding: 12px 15px;
+  width: 118px;
+ margin-left: 123px;
   color: #ffffff;
 }
 .errorMsg {

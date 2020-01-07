@@ -41,12 +41,12 @@ class Footer extends Component {
      <p>Culture/Recreation</p>
      <p>science</p>
     
-    
+
      </div>
-     <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+     <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
   
-     <SocialIcon url="http://facebook.com/jaketrent"  className="icon1"/>
-     <SocialIcon url="http://twitter.com/jaketrent" className="icon1"/>
+     <a href="https://www.google.co.in/" className="ggllogo">Facebook</a>
+     <a href="https://www.google.co.in/"  className="fblogo">Google</a>
  
      </div>
                 

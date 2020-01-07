@@ -1,5 +1,5 @@
 .footer{
-    /* position: fixed; */
+  position: fixed;
      bottom: 0;
     background-color:#777;
     width: 100%;
@@ -10,4 +10,11 @@
 .icon1{
     width:20px;
    margin:10px;
+}
+.ggllogo{
+  padding-right: 10px;
+  color: black;
+}
+.fblogo{
+  color: black;
 }

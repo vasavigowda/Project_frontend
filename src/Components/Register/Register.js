@@ -1,6 +1,7 @@
 import React from 'react';
 import './Register.css';
-import Navbar from '../Navbar/Navbar';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 
 class Register extends React.Component {
@@ -103,25 +104,23 @@ class Register extends React.Component {
   render() {
     return (
     <div id="main-registration-container">
+      <p>Attract the world’s best tech talent</p>
      <div id="register">
-        <h3>Registration page</h3>
+  
+        <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
+        <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
         <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
-        <label>Name</label>
-        <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
+        <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange}  placeholder="Name"/>
         <div className="errorMsg">{this.state.errors.username}</div>
-        <label>Email ID:</label>
-        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
+        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange} placeholder="Emai_id" />
         <div className="errorMsg">{this.state.errors.emailid}</div>
-        <label>Mobile No:</label>
-        <input type="text" name="mobileno" value={this.state.fields.mobileno} onChange={this.handleChange}   />
-        <div className="errorMsg">{this.state.errors.mobileno}</div>
-        <label>Password</label>
-        <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
+        <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange}placeholder="Password"/>
         <div className="errorMsg">{this.state.errors.password}</div>
         <input type="submit" className="button"  value="Register"/>
         </form>
     </div>
-    <Navbar/>
+    <Nav/>
+    <Footer/>
 </div>
 
       );

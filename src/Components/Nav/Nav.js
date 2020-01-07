@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
-
+import logo from '../Images/image2.jpeg';
+import './Nav.css';
 // import { BurgerIcon } from './'
 import styled from "styled-components";
 
 const Navigation = styled.header`
   width: 100%;
- 
+  height:60px;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 100px 0;
-  height: 140px;
-  margin-bottom: 60px;
-  background: #f8f8f8;
+  background: #535056; 
+  font-color:white;
+  position:fixed;
+  top:0; 
 
   .logo a {
     padding-top: 33px;
@@ -50,8 +51,7 @@ const Navigation = styled.header`
   }
   a {
     color: #222;
-    opacity: 0.55;
-    transition: all 0.6s;
+    
     color: #222;
     font-size: 1em;
   }
@@ -60,13 +60,14 @@ const Navigation = styled.header`
   }
   .fa-bars {
     display: none;
-    color: #222;
+    color: white;
     font-size: 2rem;
   }
   nav {
     ul {
       display: flex;
       justify-content: space-between;
+      margin-top:3px;
     }
     li {
       margin: 0 15px;
@@ -81,14 +82,18 @@ const Navigation = styled.header`
       }
     }
     a.active {
-      color: #222;
+      color: white;
     }
+  }
+  a{
+    color:white;
   }
 
   @media only screen and (max-width: 800px) {
     padding: 0px;
+    width:100%;
     .logo {
-      padding-left: 15px;
+      padding-left: 35px;
       padding-top: 0px !important;
     }
   }
@@ -98,7 +103,8 @@ const Navigation = styled.header`
     display: block;
     position: relative;
     .logo {
-      width: 100%;
+      width: 53%;
+      height: 50%;
       display: block;
       padding-top: 20px;
       margin: 0px;
@@ -111,7 +117,7 @@ const Navigation = styled.header`
       display: inline-block;
       position: absolute;
       top: 10px;
-      right: 10px;
+     
       cursor: pointer;
     }
     ul.collapsed {
@@ -170,39 +176,43 @@ class Nav extends Component {
     const { isExpanded } = this.state;
 
     return (
+      <div className="row">
+         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <Navigation>
-        <div className="logo">
-          <Link to="/">
-           
-            <em>
-              <div className="letterhead">
-                <span className="name">kentorry</span>
-                <span className="gray">.io</span>
-              </div>
-            </em>
-          </Link>
-        </div>
-        <nav className="nav">
-          <i
-            className="fa fa-bars"
-            aria-hidden="true"
-            onClick={e => this.handleToggle(e)}
-          />
-          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-            <NavLink activeClassName="active" to="/">
-              <li>Aboutus</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/product">
-              <li>Product</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/customer">
-              <li>Customers</li>
-              <button  className="lognbtn" onClick={this.onHandleClick}>Login</button>
-                <button href='/Login' className="signbtn">Signup</button>
-            </NavLink>
-          </ul>
-        </nav>
-      </Navigation>
+    
+      <nav className="nav navbar-header">
+        <i
+          className="fa fa-bars"
+          aria-hidden="true"
+          onClick={e => this.handleToggle(e)}
+        />
+        <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+          <NavLink activeClassName="active" to="/" className="logo">
+          <span><img src={logo} className="logo"></img></span>
+          </NavLink>
+          <NavLink activeClassName="active" to="/#Aboutus" className="about">
+            <span>Aboutus</span>
+          </NavLink>
+          <NavLink activeClassName="active" to="/#Product" className="customer">
+            <a href="#/Product">Customer</a>
+          </NavLink>
+          <NavLink activeClassName="active" to="/#" className="product1">
+            <span>Product</span>
+          </NavLink>
+          <NavLink activeClassName="active" to="/" className="searchbtn">
+          <input type="text" placeholder="search" className="search"></input>
+          </NavLink>
+          <NavLink activeClassName="active" to="/Login" className="lognbtn">
+            <span><button  className="loginbttn" >Login</button></span>
+          </NavLink>
+          <NavLink activeClassName="active" to="/Register" className="signbtn">
+            <span> <button href='/Login' className="signbttn">Signup</button></span>
+          </NavLink>
+        </ul>
+      </nav>
+    </Navigation>
+    </div>
+   </div>
     );
   }
 }

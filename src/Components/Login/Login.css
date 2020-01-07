@@ -1,20 +1,41 @@
+.login{
+    margin-left:400px !important;
+}
 .socialicon{
-    padding: 2px;
-    width:250px;
-    height: 60px;
-    background-color: rgb(53, 53, 216);
-    border-radius: 10px;
-    
+    height: 31px;
+    width: 53%;
+    margin-left: 19px;
+    background: #3B5998;
+    color:white;
+    border-radius:5px;
+}
+.fa {
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+  }
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-google {
+    background: #E67E22 ;
+    color: white;
 }
 .googleicon{
-    margin-top: 100px;
-    width:250px;
-    height: 60px;
+    height: 31px;
+    width: 53%;
+    margin-left: 19px;
     border-radius: 10px;
-
+    background: #E67E22 ;
+    color:white;
+    border-radius:5px;
+    margin-top: 14px;
+}
+label{
+    color: black;
+    margin-left:14px;
 }
 
-/* .fbicon{
-    width:10px;
-    height: 10px;
-} */

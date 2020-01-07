@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
 import { SocialIcon } from 'react-social-icons';
 import './Login.css';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 
 class Login extends React.Component {
@@ -75,10 +76,11 @@ debugger
   render() {
     return (
     <div id="login">
-      <button className="googleicon"><SocialIcon url="http://google.com/jaketrent" />Login in with google</button><br/><br/>
-        <button className="socialicon"><SocialIcon url="http://facebook.com/jaketrent"  className="fbicon"/>Login in with facebook</button><br/><br/>
-      <div id="register">
-        <h3>Login Page</h3>
+     
+      <div id="register" className="login">
+     
+        <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
+        <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
         <form method="post"  name="submituserLoginForm"  onSubmit= {this.submituserLoginForm} >
         <label>Email ID:</label>
         <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
@@ -86,10 +88,11 @@ debugger
         <label>Password</label>
         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
         <div className="errorMsg">{this.state.errors.password}</div>
-        <input type="submit" className="button"  value="Register"/>
+        <input type="submit" className="button"  value="Login"/>
         </form>
     </div>
-    <Navbar/>
+    <Nav/>
+    <Footer/>
 </div>
       );
   }

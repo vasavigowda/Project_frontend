@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
-import Navbar from '../Navbar/Navbar';
 import './Index.css';
 import logo from '../Images/image2.jpeg';
 import about from '../Images/images.jpeg';
 import Footer from '../Footer/Footer';
+import Nav from '../Nav/Nav';
 
 class Index extends Component {
   render() {
-    
     return (
       <div>
-         <Navbar/><br/>
-         <section className="container1">
+         <Nav/><br/> 
+         <section className="container1"> 
          <div >
            <img src={logo} className="logo1"></img>
-          <span className="logoname1" >IQ overflow</span>
+          
          </div>
            <h1 className="h1">Companies around the world rely <br/>on Stack Overflow</h1><br/>
            <p>Millions of developers rely on Stack Overflow <br/>to solve their coding 
            problems, share siloed knowledge, and ship better code faster.</p>
+
+
          <div className="row">
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-
-          
           <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
             <h6>For Employers</h6>
             <h1>Talent</h1>
@@ -45,8 +44,7 @@ class Index extends Component {
          </div>
          </section><br/>
          <div className="aboutus">
-           <section id="Aboutus">
-             {/* <div className=""></div> */}
+           <section id="Aboutus">   
          <h2> Learn and grow with Stack Overflow</h2>
          <img src={about} className="abtimg"></img>
       <p>Get your coding questions answered to learn, build, and <br/>level up whether
@@ -85,7 +83,6 @@ class Index extends Component {
           </div>
         </section>
         </div>
-
       <Footer/>
        </div>
         );
