@@ -32,7 +32,6 @@ class Register extends React.Component {
           let fields = {};
           fields["username"] = "";
           fields["emailid"] = "";
-          fields["mobileno"] = "";
           fields["password"] = "";
           this.setState({fields:fields});
           alert("Form submitted");
@@ -64,26 +63,12 @@ class Register extends React.Component {
       }
 
       if (typeof fields["emailid"] !== "undefined") {
-        //regular expression for email validation
         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         if (!pattern.test(fields["emailid"])) {
           formIsValid = false;
           errors["emailid"] = "*Please enter valid email-ID.";
         }
       }
-
-      if (!fields["mobileno"]) {
-        formIsValid = false;
-        errors["mobileno"] = "*Please enter your mobile no.";
-      }
-
-      if (typeof fields["mobileno"] !== "undefined") {
-        if (!fields["mobileno"].match(/^[0-9]{10}$/)) {
-          formIsValid = false;
-          errors["mobileno"] = "*Please enter valid mobile no.";
-        }
-      }
-
       if (!fields["password"]) {
         formIsValid = false;
         errors["password"] = "*Please enter your password.";
@@ -103,8 +88,16 @@ class Register extends React.Component {
     }
   render() {
     return (
-    <div id="main-registration-container">
-      <p>Attract the world’s best tech talent</p>
+      <div>
+       <div className="row">
+    <div id="main-registration-container"> 
+      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+     
+        <h1 className="regcontainer"> Attract the world’s best tech talent</h1>
+      
+     
+      </div>
+      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
      <div id="register">
   
         <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
@@ -119,9 +112,14 @@ class Register extends React.Component {
         <input type="submit" className="button"  value="Register"/>
         </form>
     </div>
-    <Nav/>
-    <Footer/>
+    </div>
+    </div>
 </div>
+
+<Nav/>
+    {/* <Footer/
+    > */}
+    </div>
 
       );
   }
