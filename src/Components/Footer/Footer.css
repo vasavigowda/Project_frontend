@@ -1,11 +1,17 @@
 .footer{
-  position: fixed;
      bottom: 0;
     background-color:#777;
     width: 100%;
+    color: white;
+  }
+  .footerlogo{
+    margin-left: 50px;
+    width: 40%;
+    height: 21%;
+    padding-top:7px;
   }
   h6{
-    color: black;
+    color:black !important;
   }
 .icon1{
     width:20px;
@@ -13,8 +19,8 @@
 }
 .ggllogo{
   padding-right: 10px;
-  color: black;
+  color: #0f21ef;
 }
 .fblogo{
-  color: black;
+  color: #0f21ef;
 }

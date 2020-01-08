@@ -89,37 +89,36 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-       <div className="row">
-    <div id="main-registration-container"> 
-      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-     
-        <h1 className="regcontainer"> Attract the world’s best tech talent</h1>
       
-     
+          <div id="main-registration-container"> 
+          <div className="row">
+            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+               <h1 className="regcontainer"> Attract the world’s best tech talent</h1>
+               <p>Get unstuck — ask a question Unlock new privileges like <br/>voting and 
+                 commentingSave your favorite tags,<br/> filters, and jobsEarn reputation and badges</p>
+            </div>
+           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div id="register">
+              <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
+              <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
+              <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
+              <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange}  placeholder="Name"/>
+              <div className="errorMsg">{this.state.errors.username}</div>
+              <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange} placeholder="Emai_id" />
+              <div className="errorMsg">{this.state.errors.emailid}</div>
+              <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange}placeholder="Password"/>
+              <div className="errorMsg">{this.state.errors.password}</div>
+              <input type="submit" className="button"  value="Register"/>
+              </form>
+            </div>
+           </div>
+          </div>
       </div>
-      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-     <div id="register">
-  
-        <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
-        <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
-        <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
-        <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange}  placeholder="Name"/>
-        <div className="errorMsg">{this.state.errors.username}</div>
-        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange} placeholder="Emai_id" />
-        <div className="errorMsg">{this.state.errors.emailid}</div>
-        <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange}placeholder="Password"/>
-        <div className="errorMsg">{this.state.errors.password}</div>
-        <input type="submit" className="button"  value="Register"/>
-        </form>
-    </div>
-    </div>
-    </div>
-</div>
 
-<Nav/>
-    {/* <Footer/
-    > */}
-    </div>
+          <Nav/>
+         <Footer/>
+        
+      </div>
 
       );
   }

@@ -1,3 +1,7 @@
+#main-registration-container{
+  background-color: #33ccff;
+  color: #ffffff;
+}
 #register
 {
     width: 400px;
@@ -10,7 +14,7 @@
   font-size: 14px;
   background: #ffffff;
   margin: 100px auto;
-  margin-left:856px;
+  /* margin-left:856px; */
 }
 form label, form input {
   display: block;
@@ -38,5 +42,5 @@ form input {
   margin-bottom: 10px;
 }
 .regcontainer{
-  margin-top: 300px !important;
+  margin-top: 150px !important;
 }
