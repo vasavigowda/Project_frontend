@@ -1,6 +1,7 @@
+
 .logo{
   width: 22% !important;
-  margin-right: 26px !important;
+  /* margin-right: 26px !important; */
   float: left !important;
   margin-top: 5px !important;
   /* align-content:left !important; */
@@ -21,10 +22,13 @@
   margin-right: 43px;
   margin-top:25px;
 }
+.search{
+  width:200%;
+}
 .lognbtn{
   margin-right: 43px;
   margin-top:25px;
- 
+  margin-left: 320px;
 }
 .loginbttn{
   background-color: #d2daec;

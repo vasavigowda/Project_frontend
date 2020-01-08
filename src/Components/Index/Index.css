@@ -8,6 +8,9 @@ body{
 h6{
     color:rgb(117, 122, 194)
 }
+.productpage{
+    width:100%;
+}
 .logo1{
     width:50px;
     height:50px;
@@ -26,6 +29,9 @@ h6{
 .container1{
    
     margin-top:100px;   
+}
+.container2{
+    width:100%;
 }
 /* .aboutus{
     margin-top:561px;
