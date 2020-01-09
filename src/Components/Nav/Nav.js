@@ -188,7 +188,7 @@ class Nav extends Component {
   }
  
   onHandleClick(){
-    BrowerHistory.push('/register');
+    BrowerHistory.push('/signup');
     }
 
 	render() {

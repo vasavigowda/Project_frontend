@@ -80,34 +80,35 @@ debugger
 
 render() {
 return (
-<div className="register">
-<div class="container">
-<div class="row">
-<div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"></div>
-<div class="col-sm-4 col-lg-4 col-md-4 col-xs-4 frm">
-<h1>Signup</h1>
+  <div id="main-registration-container"> 
+    
+    <div class="row">
+      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+         <h1 className="regcontainer"> Attract the world’s best tech talent</h1>
+         <p>Get unstuck — ask a question Unlock new privileges like <br/>voting and 
+             commentingSave your favorite tags,<br/> filters, and jobsEarn reputation and badges</p>
+      </div>
+      <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div id="register">
+          <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
+          <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
+          <label className="frstname"><b>Display Name</b></label>
+          <input type="text" placeholder="display name" className="errorMsg frstnameinput" onChange={this.onHandleChange} /><br />
+          <p >{this.state.ferr}</p>
+          <label className="email"><b>Email</b></label>
+          <input type="text" placeholder="Email" className="errorMsg emailinput" onChange={this.onHandleChange} /><br />
+          <p >{this.state.uerr}</p>
+          <label className="password"><b>Password</b></label>
+          <input type="password" placeholder="Password" className="errorMsg passwordinput" onChange={this.onHandleChange} /><br /><br />
+          <p >{this.state.perr}</p>
+          <a href="" onClick={this.onHandleClicks}>you have already account</a>
+          <p >{this.state.phnerr}</p>
+          <button onClick={this.onHandleClick} className="button"><b>Register</b></button><a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<label><b>First Name</b></label><br />
-<input type="text" name="Firstname" className="one" onChange={this.onHandleChange} /><br />
-<p >{this.state.ferr}</p>
-
-
-<label ><b>Email</b></label><br />
-<input type="text" name="email" className="one" onChange={this.onHandleChange} /><br />
-<p >{this.state.uerr}</p>
-<label ><b>Password</b></label><br />
-<input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br />
-<p >{this.state.perr}</p>
-
-<a href="" onClick={this.onHandleClicks}>you have already account</a>
-<p >{this.state.phnerr}</p>
-<button onClick={this.onHandleClick} className="btn1"><b>Register</b></button><a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
-</div>
-<div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
-</div>
-</div>
-</div>
-</div>
 );
 }
 }
