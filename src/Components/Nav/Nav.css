@@ -1,6 +1,6 @@
 
 .logo{
-  width: 22% !important;
+  width: 84% !important;
   /* margin-right: 26px !important; */
   float: left !important;
   margin-top: 5px !important;
@@ -8,34 +8,39 @@
 }
 .about{
   margin-right: 38px;
-  margin-top:25px;
+  margin-top:12px;
+  margin-left: 39px;
 }
 .customer{
   margin-right: 48px;
-  margin-top:25px;
+  margin-top:12px;
 }
 .product1{
   margin-right: 43px;
-  margin-top:25px;
+  margin-top:12px;
 }
 .searchbtn{
   margin-right: 43px;
-  margin-top:25px;
+  margin-top:12px;
 }
 .search{
   width:200%;
+  margin-right: 203px;
 }
 .lognbtn{
   margin-right: 43px;
-  margin-top:25px;
+   margin-top:12px;
   margin-left: 320px;
 }
 .loginbttn{
-  background-color: #d2daec;
+  
+  margin-right: 30px;
 }
 
 .signbtn{
   margin-top:25px;
 }
 
-
+.modelbody{
+  width: 10%;
+}

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from '../Images/image2.jpeg';
+import Modal from 'react-modal';
 import './Nav.css';
 // import { BurgerIcon } from './'
 import styled from "styled-components";
+import BrowerHistory from '../Utils/BrowserHistory';
+import Login from "../Login/Login";
 
 const Navigation = styled.header`
   width: 100%;
@@ -163,7 +166,9 @@ class Nav extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isExpanded: false
+      isExpanded: false,
+      modalIsOpen: false,
+      modalIsOpen1: false
 		};
 	}
 	handleToggle(e) {
@@ -171,7 +176,21 @@ class Nav extends Component {
 		this.setState({
 			isExpanded: !this.state.isExpanded
 		});
-	}
+  }
+
+ 
+
+  openModal=()=> {
+    this.setState({modalIsOpen: true});
+  }
+  closeModal=()=> {
+    this.setState({modalIsOpen: false});
+  }
+ 
+  onHandleClick(){
+    BrowerHistory.push('/register');
+    }
+
 	render() {
 		const { isExpanded } = this.state;
 
@@ -184,27 +203,21 @@ class Nav extends Component {
 							<i	className="fa fa-bars"	aria-hidden="true"
 								onClick={e => this.handleToggle(e)}/>
 							<ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-								<NavLink activeClassName="active" to="#" className="logo">
-									<span><img src={logo} className="logo"></img></span>
-								</NavLink>
-								<NavLink activeClassName="active" to="/#Aboutus" className="about">
-									<span>Aboutus</span>
-								</NavLink>
-								<NavLink activeClassName="active" to="/#Customer" className="customer">
-									<a href="/#Product">Customer</a>
-								</NavLink>
-								<NavLink activeClassName="active" to="/Index.js#Product" className="product1">
-									<span>Product</span>
-								</NavLink>
-								<NavLink activeClassName="active" to="/" className="searchbtn">
-									<input type="text" placeholder="search" className="search"></input>
-								</NavLink>
-								<NavLink activeClassName="active" to="/Login" className="lognbtn">
-									<span><button className="loginbttn" >Login</button></span>
-								</NavLink>
-								<NavLink activeClassName="active" to="/Register" className="signbtn">
-									<span> <button href='/Login' className="signbttn">Signup</button></span>
-								</NavLink>
+              <span><img src={logo} className="logo"></img></span>
+              <span className="about"> <a href="/#Aboutus" >Aboutus</a></span>
+              <span  className="customer"><a href="/#Product">Customer</a></span>
+              <span className="product1"><a href="/#Product" > Product</a></span>
+              <input className="search" type="text" placeholder="search" ></input>
+              <span className="loginbttn"> <button onClick={this.openModal}>Login</button>
+             </span>
+             
+             <Modal className="modelbody"
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Register Modal"> 
+          <Login />
+        </Modal> 
+              <span className="signbttn"> <button onClick={this.onHandleClick}>Signup</button></span>
 							</ul>
 						</nav>
 					</Navigation>

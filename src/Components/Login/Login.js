@@ -5,6 +5,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
 
+
 class Login extends React.Component {
     constructor() {
       super();
@@ -92,7 +93,7 @@ debugger
         </form>
     </div>
     <Nav/>
-    <Footer/>
+
 </div>
       );
   }
