@@ -12,6 +12,8 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Userquestion from './Components/Userquestion/Userquestion';
 import AllPost from './Components/Userquestion/AllPost';
 import PostForm from './Components/Userquestion/PostForm';
+import Askquestion from './Components/Practice/Askquestion';
+import Appoin from './Components/Practice/Appoin';
 
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route exact path='/Userquestion' component={Userquestion}></Route>
         <Route exact path='/Allpost' component={AllPost}></Route>
         <Route exact path='/Allpost' component={PostForm}></Route>
+        <Route exact path='/Ask' component={Askquestion}></Route>
+        <Route exact path='/Appoin' component={Appoin}></Route>
         </switch>
       </Router>
      
