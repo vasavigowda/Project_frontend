@@ -167,8 +167,8 @@ class Nav extends Component {
 		super(props);
 		this.state = {
       isExpanded: false,
-      modalIsOpen: false,
-      modalIsOpen1: false
+      modalIsOpen: false
+    
 		};
 	}
 	handleToggle(e) {
@@ -177,9 +177,6 @@ class Nav extends Component {
 			isExpanded: !this.state.isExpanded
 		});
   }
-
- 
-
   openModal=()=> {
     this.setState({modalIsOpen: true});
   }
@@ -188,7 +185,7 @@ class Nav extends Component {
   }
  
   onHandleClick(){
-    BrowerHistory.push('/signup');
+    BrowerHistory.push('/Signup');
     }
 
 	render() {
@@ -208,7 +205,7 @@ class Nav extends Component {
               <span  className="customer"><a href="/#Product">Customer</a></span>
               <span className="product1"><a href="/#Product" > Product</a></span>
               <input className="search" type="text" placeholder="search" ></input>
-              <span className="loginbttn"> <button onClick={this.openModal}>Login</button>
+              <span className="loginbttn"> <button onClick={this.openModal } className="loginbutton">Login</button>
              </span>
              
              <Modal className="modelbody"
@@ -217,7 +214,7 @@ class Nav extends Component {
           contentLabel="Register Modal"> 
           <Login />
         </Modal> 
-              <span className="signbttn"> <button onClick={this.onHandleClick}>Signup</button></span>
+              <span className="signbttn"><button onClick={this.onHandleClick} className="loginbutton">Signup</button></span>
 							</ul>
 						</nav>
 					</Navigation>

@@ -2,94 +2,86 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import './Login.css';
 import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
-
+import BrowserHistory from '../Utils/BrowserHistory';
+import axios from 'axios'
 
 
 class Login extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        fields: {},
-        errors: {}
-      }
-      this.handleChange = this.handleChange.bind(this);
-      this.submituserLoginForm = this.submituserLoginForm.bind(this);
-
+  constructor(props) {
+    super(props);
+    this.state = {
+    email: '',
+    password: '',
+    uerr: '',
+    perr: ''
     };
-    handleChange(e) {
-      debugger
-      let fields = this.state.fields;
-      fields[e.target.name] = e.target.value;
-      this.setState({
-        fields
-      });
-
     }
-    submituserLoginForm(e) {
-      debugger  
-      e.preventDefault();
-      if (this.validateForm()) {
-          let fields = {};
-          fields["emailid"] = "";
-          fields["password"] = "";
-          this.setState({fields:fields});
-          alert("Form submitted");
-      }
-
+    onHandleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
     }
+    onHandleClicks = (e) => {
+    BrowserHistory.push('/login'); 
+    }
+    onHandleClicksCancel = (e) => {
+    BrowserHistory.push('/'); 
+    }
+    login = (e) => {
+    e.preventDefault();
+    const reqst = {
+    email: this.state.email,
+    password: this.state.password
+    }
+    
+    
+    if ( this.state.email.length === 0 && this.state.password.length === 0 ) {
+    this.setState({
+    uerr: "Email is required",
+    perr: "Password is required"
+    })
+    }
+    else if (this.state.email.length === 0) {
+    this.setState({ uerr: "Username is required" })
+    }
+    else if (this.state.password.length === 0) {
+    this.setState({ perr: "Password is required" })
+    }
+    else if (!this.state.email.match(/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/)) {
+    this.setState({ uerr: "Please enter the valid email" })
+    }
+    else if (!this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/)) {
+    this.setState({ perr: "Please enter the valid password" })
+    }
+    else {
+    // BrowserHistory.push('/login')
+    // this.Loginaction.props.success("Register Successfully")
+    }
+    const url = "http://localhost:4000/Signin"
+    return axios({
+      method: 'POST',
+      url,
+      data: reqst
+    }).then(async (res) => {
 
-    validateForm() {
-debugger
-      let fields = this.state.fields;
-      let errors = {};
-      let formIsValid = true;
-
-      if (!fields["emailid"]) {
-        formIsValid = false;
-        errors["emailid"] = "*Please enter your email-ID.";
-      }
-
-      if (typeof fields["emailid"] !== "undefined") {
-        //regular expression for email validation
-        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-        if (!pattern.test(fields["emailid"])) {
-          formIsValid = false;
-          errors["emailid"] = "*Please enter valid email-ID.";
-        }
-      }
-      if (!fields["password"]) {
-        formIsValid = false;
-        errors["password"] = "*Please enter your password.";
-      }
-
-      if (typeof fields["password"] !== "undefined") {
-        if (!fields["password"].match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/)) {
-          formIsValid = false;
-          errors["password"] = "*Please enter secure and strong password.";
-        }
-      }
-      this.setState({
-        errors: errors
-      });
-      return formIsValid;
+      BrowserHistory.push('/'); 
+      console.log(res);
+    })
     }
   render() {
     return (
     <div id="login">
      
-      <div id="register" className="login">
+      <div id="register1" className="login">
      
         <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
         <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
         <form method="post"  name="submituserLoginForm"  onSubmit= {this.submituserLoginForm} >
-        <label>Email ID:</label>
-        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
-        <div className="errorMsg">{this.state.errors.emailid}</div>
-        <label>Password</label>
-        <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
-        <div className="errorMsg">{this.state.errors.password}</div>
-        <input type="submit" className="button"  value="Login"/>
+        <label ><b className="emailinp">Email:</b></label>
+        <input type="text" name = "email" value={this.state.email} onChange={this.onHandleChange} />
+        <div className="errorMsg">{this.state.uerr} </div>
+        <label><b className="emailinp">Password</b></label>
+        <input type="password" name="password" value={this.state.password} onChange={this.onHandleChange} />
+        <div className="errorMsg">{this.state.perr}</div>
+        <input type="submit" className="button1" onClick={this.login} value="Login"/>
         </form>
     </div>
     <Nav/>
