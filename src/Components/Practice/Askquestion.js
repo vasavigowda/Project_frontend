@@ -10,7 +10,7 @@ import TableRow from './TableRow';
       this.state = {Users: []};
     }
     componentDidMount(){
-      axios.get('http://localhost:8000/appt')
+      axios.post('http://localhost:4000/Signup')
         .then(response => {
           this.setState({ Users: response.data });
         })

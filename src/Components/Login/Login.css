@@ -54,11 +54,13 @@
     color: #cc0000;
     margin-bottom: 12px;
   }
-  .button1 {
+  .button11 {
     background-color: #00BFFF;
     border-color: #3ac162;
     font-weight: bold;
-    width: 118px;
-   margin-left: 123px;
+   margin-left: 187px;
     color: #ffffff;
+  }
+  .text{
+    margin-left:100px ;
   }
