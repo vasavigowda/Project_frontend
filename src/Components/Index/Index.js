@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Index.css';
 import logo from '../Images/image2.jpeg';
-import about from '../Images/images.jpeg';
+import about from '../Images/img2.jpeg';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
 

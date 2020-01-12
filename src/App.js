@@ -3,9 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Index from './Components/Index/Index';
-import Nav from './Components/Nav/Nav';
-import Signup from './Components/Signup/Signup';
-import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Userquestion from './Components/Userquestion/Userquestion';
@@ -13,6 +10,7 @@ import AllPost from './Components/Userquestion/AllPost';
 import PostForm from './Components/Userquestion/PostForm';
 import Askquestion from './Components/Practice/Askquestion';
 import Appoin from './Components/Practice/Appoin';
+import Questionpage from './Components/Dashboard/Questionpage';
 
 
 
@@ -31,6 +29,7 @@ function App() {
         <Route exact path='/Allpost' component={PostForm}></Route>
         <Route exact path='/Ask' component={Askquestion}></Route>
         <Route exact path='/Appoin' component={Appoin}></Route>
+        <Route exact path='/quest' component={Questionpage}></Route>
         </switch>
       </Router>
      

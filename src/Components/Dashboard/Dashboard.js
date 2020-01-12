@@ -6,16 +6,16 @@ import './Dashboard.css';
 class Dashboard extends Component {
     render() {
         return (
-            <div>
+            <div className="dashboardpage">
                       <Nav/> 
                 <div className="row containerdash">
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6"> <h1>All questions</h1></div>
-                <div className= "col-xs-6 col-sm-6 col-md-6 col-lg-6"><button><a href="/Userquestion">Ask Question</a></button></div>
+                <div className= "col-xs-6 col-sm-6 col-md-6 col-lg-6"><button><a href="/quest">Ask Question</a></button></div>
                 </div>  
           
-                <Footer/>
+                
             </div>
-            
+            // <Foot er/>
         );
     }
 }
