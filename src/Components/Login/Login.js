@@ -38,19 +38,10 @@ const payload = {
 email: this.state.email,
 password: this.state.password
 }
-// signup(reqst).then(res => {
-// if (res.data === "User Created Succesfully") {
-// alert("UserCreated Successfully")
-// BrowserHistory.push('/login')
-// }
-
-// })
-
 if (this.state.email.length === 0 && this.state.password.length === 0 ) {
 this.setState({
 uerr: "Email is required",
 perr: "Password is required"
-
 })
 }
 else if (this.state.email.length === 0) {
@@ -65,9 +56,9 @@ this.setState({ uerr: "Please enter the valid email" })
 else if (!this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/)) {
 this.setState({ perr: "Please enter the valid password" })
 }
-// else {
-//     BrowserHistory.push('/dashboard')
-//     }
+else {
+    BrowserHistory.push('/dashboard')
+    }
 this.props.registerHandle(payload);
     
 }
@@ -91,16 +82,9 @@ return (
 <a onClick={this.onHandleClicks} className="text">you have already account</a>
 <p >{this.state.phnerr}</p>
 <button onClick={this.onHandleClick} className="button11"><b>Login</b></button><a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
-
 </form>
 </div>
 </div>
-
-
-
-
-
-
 );
 }
 }

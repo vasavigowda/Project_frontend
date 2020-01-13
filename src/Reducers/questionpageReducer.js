@@ -1,5 +1,6 @@
 const initialState={
-    text:''
+    text:'',
+    answer:''
     }
     
     export default(state = initialState,action)=>{
@@ -7,6 +8,7 @@ const initialState={
     
     case "REGISTER":{
     return{...state,text:action.payload.text,
+        ...state,answer:action.payload.answer,
     }
     }
     default:
