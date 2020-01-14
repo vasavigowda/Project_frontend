@@ -3,34 +3,26 @@ import { connect } from 'react-redux';
 import BrowserHistory from '../Utils/BrowserHistory'
 import {questionHandle} from '../../Action/qusetionpageAction';
 
-
-
 class Questionpage extends Component {
     constructor(props) {
         super(props);
         this.state = {
         text: '',
-        answer:'',
+        answer:[],
         texterror: ''
         };
         }
         onHandleChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
         }
-        // onHandleClick1 = (e) => {
-        //     this.setState({
-        //         answer: e.target.value
-        //     })
-        //     }
         onHandleClick = (e) => {
         e.preventDefault();
         const payload = {
             text: this.state.text,
             answer: this.state.answer
         }
-     debugger
-console.log(payload)
-        if (this.state.text.length === 0 ) {
+        console.log(payload)
+        if (this.state.text.length === 0) {
         this.setState({
         texterror: "text is required"
         })
@@ -50,8 +42,8 @@ console.log(payload)
             <div  >
                  <label className="text"><b>Ask question here</b></label>
           <input type="text" name= "text" placeholder="enter text here" className=" text1" onChange={this.onHandleChange} /><br />
-          <p  className="errorMsg " >{this.state.texterror}</p>
-
+          <p  className="errorMsg " >{this.state.texterror}</p><br/>
+        <label><h2>Post the Answers</h2></label><br/>
           <label className="text"><b>Write the answer</b></label>
           <input type="text" name= "answer" placeholder="enter answer" className=" text1" onChange={this.onHandleChange} /><br />
           <button onClick={this.onHandleClick} className="button"><b>Enter</b></button>
@@ -67,3 +59,4 @@ const mapStateToProps=(state)=>{
     }
     export default connect(mapStateToProps,{questionHandle}) (Questionpage);
     
+   

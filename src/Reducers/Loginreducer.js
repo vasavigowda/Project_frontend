@@ -1,5 +1,4 @@
 const initialState={
-    Firstname:'',
     email:'',
     password:'',
     }
@@ -8,8 +7,7 @@ const initialState={
     switch(action.type){
     
     case "Login":{
-    return{...state,Firstname:action.payload.Firstname,
-    email:action.payload.email,
+    return{...state,email:action.payload.email,
     password:action.payload.password
    
     }

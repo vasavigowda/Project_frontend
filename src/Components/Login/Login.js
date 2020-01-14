@@ -60,7 +60,6 @@ else {
     BrowserHistory.push('/dashboard')
     }
 this.props.registerHandle(payload);
-    
 }
 
 
