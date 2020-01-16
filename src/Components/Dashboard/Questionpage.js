@@ -8,7 +8,6 @@ class Questionpage extends Component {
         super(props);
         this.state = {
         text: '',
-        answer:[],
         texterror: ''
         };
         }
@@ -18,8 +17,7 @@ class Questionpage extends Component {
         onHandleClick = (e) => {
         e.preventDefault();
         const payload = {
-            text: this.state.text,
-            answer: this.state.answer
+            text: this.state.text
         }
         console.log(payload)
         if (this.state.text.length === 0) {
@@ -39,13 +37,12 @@ class Questionpage extends Component {
         
     render() {
         return (
-            <div  >
-                 <label className="text"><b>Ask question here</b></label>
-          <input type="text" name= "text" placeholder="enter text here" className=" text1" onChange={this.onHandleChange} /><br />
-          <p  className="errorMsg " >{this.state.texterror}</p><br/>
-        <label><h2>Post the Answers</h2></label><br/>
-          <label className="text"><b>Write the answer</b></label>
-          <input type="text" name= "answer" placeholder="enter answer" className=" text1" onChange={this.onHandleChange} /><br />
+         
+            <div>
+                 
+            <h2>Ask question here</h2>
+            <input type="text" name= "text" placeholder="Enter a question" className=" text1" onChange={this.onHandleChange} /><br />
+             <p  className="errorMsg " >{this.state.texterror}</p><br/>
           <button onClick={this.onHandleClick} className="button"><b>Enter</b></button>
             </div> 
         );
@@ -54,8 +51,7 @@ class Questionpage extends Component {
 
 const mapStateToProps=(state)=>{
     const {text}=state.questionpageReducer
-    const {answer}=state.questionpageReducer
-    return {text,answer}
+    return {text}
     }
     export default connect(mapStateToProps,{questionHandle}) (Questionpage);
     

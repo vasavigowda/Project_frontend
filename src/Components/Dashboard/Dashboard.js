@@ -5,10 +5,10 @@ import Nav from '../Nav/Nav';
 import './Dashboard.css';
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        Users: [],
+  constructor(props) {
+    super(props);
+     this.state = {
+        Users: []
         };
         }
         componentDidMount(){
@@ -22,23 +22,26 @@ class Dashboard extends Component {
         }
         tabRow(){
         return this.state.Users.map(function(object, i){
-        return <TableRow obj={object} key={i} />;
+        return  <TableRow obj={object} abc={i} />;
         });
         }
-
+        
     render() {
         return (
             <div className="containerdash">
                 <Nav/>
-                 <div className="row">
-                <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6"> <h1>All questions</h1></div>
+               
+                 <div className="row container">
+                <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                     <h3>All questions</h3>
+                     <h1>{this.state.Users.length}</h1>
+                </div>
                 <div className= "col-xs-6 col-sm-6 col-md-6 col-lg-6"><button className="questioninp"><a href="/quest">Ask Question</a></button></div>
                 </div>  
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                 <tbody>
                 { this.tabRow() }
                 </tbody>
-
                 </table>
             </div>
         );

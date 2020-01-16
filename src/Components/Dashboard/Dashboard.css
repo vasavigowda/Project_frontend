@@ -1,8 +1,17 @@
+.container{
+    background-color: grey;
+    margin-left: 8%;
+    height: 81px;
+}
+
 .containerdash{
     margin-top:10%;
+   
 }
 .questioninp{
-    background-color: #33ccff;
+    /* background-color: #33ccff; */
+    color: white !important;
+    margin-top:4%;
 }
 .table{
     margin-left:10%;

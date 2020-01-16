@@ -33,14 +33,6 @@ firstname: this.state.firstname,
 email: this.state.email,
 password: this.state.password
 }
-// signup(reqst).then(res => {
-// if (res.data === "User Created Succesfully") {
-// alert("UserCreated Successfully")
-// BrowserHistory.push('/login')
-// }
-
-// })
-
 if (this.state.firstname.length === 0 && this.state.email.length === 0 && this.state.password.length === 0 ) {
 this.setState({
 ferr: "Firstname is required", 
@@ -67,12 +59,8 @@ this.setState({ uerr: "Please enter the valid email" })
 else if (!this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/)) {
 this.setState({ perr: "Please enter the valid password" })
 }
-else {
-BrowserHistory.push('/login')
-}
+else
 this.props.registerHandle(payload);
-
-
 }
 
 
@@ -101,8 +89,9 @@ return (
           <p  className="errorMsg " >{this.state.perr}</p>
           <a href="" onClick={this.onHandleClicks}>you have already account</a>
           <p   className="errorMsg ">{this.state.phnerr}</p>
-          <button onClick={this.onHandleClick} className="button"><b>Register</b></button>
+         <div><button onClick={this.onHandleClick} className="button"><b>Register</b></button>
           <button onClick={this.onHandleClicksCancel} className="buttoncancel">Cancel</button>
+          </div> 
         </div>
       </div>
     </div>

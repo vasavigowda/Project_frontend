@@ -56,9 +56,6 @@ this.setState({ uerr: "Please enter the valid email" })
 else if (!this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/)) {
 this.setState({ perr: "Please enter the valid password" })
 }
-else {
-    BrowserHistory.push('/dashboard')
-    }
 this.props.registerHandle(payload);
 }
 
@@ -77,8 +74,6 @@ return (
 <label ><b className="emailinp">Password</b></label><br />
 <div> <input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br /></div>
 <div className="errorMsg"> {this.state.perr}</div>
-
-<a onClick={this.onHandleClicks} className="text">you have already account</a>
 <p >{this.state.phnerr}</p>
 <button onClick={this.onHandleClick} className="button11"><b>Login</b></button><a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
 </form>
