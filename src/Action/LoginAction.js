@@ -9,10 +9,11 @@ data: payload
 };
 
 return function(dispatch)
-{console.log(payload)
+{
+    console.log(payload)
 axios(options)
 .then(response => {
-console.log(response.status);
+console.log(response);
 BrowserHistory.push('/dashboard')
 
 });

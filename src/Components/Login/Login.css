@@ -58,9 +58,23 @@
     background-color: #00BFFF;
     border-color: #3ac162;
     font-weight: bold;
-   margin-left: 187px;
+   margin-left: 171px;
     color: #ffffff;
+    width: 62px;
+    height: 34px;
   }
   .text{
     margin-left:100px ;
+  }
+  .forgetpassword{
+    margin-right:100px;
+  }
+  .forget{
+    margin-left: 202px;
+    color: #ffffff;
+  }
+  .cancel{
+    margin-left:20px;
+    background-color: #00BFFF;
+    color: #ffffff;
   }

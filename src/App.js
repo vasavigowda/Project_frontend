@@ -9,6 +9,8 @@ import Userquestion from './Components/Userquestion/Userquestion';
 import AllPost from './Components/Userquestion/AllPost';
 import PostForm from './Components/Userquestion/PostForm';
 import Questionpage from './Components/Dashboard/Questionpage';
+import Forgetpassword from './Components/Login/Forgetpassword';
+import Usersview from './Components/Dashboard/Usersview';
 
 
 
@@ -26,6 +28,8 @@ function App() {
         <Route exact path='/Allpost' component={AllPost}></Route>
         <Route exact path='/Allpost' component={PostForm}></Route>
         <Route exact path='/quest' component={Questionpage}></Route>
+        <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route>
+        <Route exact path='/userview' component={Usersview}></Route>
         </switch>
       </Router>
      

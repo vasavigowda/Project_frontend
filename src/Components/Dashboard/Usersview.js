@@ -1,0 +1,75 @@
+import React, { Component } from 'react';
+import axios from 'axios'
+
+class Usersview extends Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+      usersview: []
+      };
+     }
+   componentDidMount(){
+   axios.get('http://localhost:4090/Signin')
+   .then(response => {
+   this.setState({ usersview: response.data });
+    })
+    .catch(function (error) {
+     console.log(error);
+       })
+     }   
+    render() {
+        return (
+            <div> 
+               {this.state.usersview.map(name => {
+          return(
+        //     <div class="card-body" >
+        //  <b>Name:</b>{name.firstname}<br/>
+        //   <b>Email:</b>{name.email}
+        //  </div>
+            
+             <table border="5" >
+                <tr>
+              <td  style={{width:"250px",color:"red"}}>{name.firstname}<br/>{name.email}</td>
+                
+                </tr>
+               
+                 </table>
+                  
+            )
+         }
+       )}
+
+            </div>
+        );
+    }
+}
+
+
+
+
+
+{/* <div  className="card_border">
+             <img className="product_images" src={tomato}/>
+        {this.state.data.map(name => {
+        if (name.productName === "tomato") {
+          return(
+                <div>
+                    <div className="product_fontclr">
+                         <div ><td>PRODUCT NAME:{name.productName}</td></div>
+                        <div><td>PRODUCT WEIGHT:{name.productWeight}</td></div>
+                        <div ><td>AMOUNT:{name.Amount}</td></div>
+                        <button className="Buying_button">Buy</button><hr></hr>
+                    </div>
+                 </div>
+
+            )}
+         }
+       )}
+       </div> */}
+
+
+
+
+
+
+export default Usersview;

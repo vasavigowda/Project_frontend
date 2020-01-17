@@ -32,9 +32,7 @@ class Questionpage extends Component {
         BrowserHistory.push('/dashboard')
         }
         this.props.questionHandle(payload);
-      
-        }
-        
+        } 
     render() {
         return (
          
