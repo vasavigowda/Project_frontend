@@ -1,0 +1,26 @@
+.container3{
+    /* background-image: url('../Images/img2.jpeg'); */
+    background: linear-gradient(to bottom, #89f7fe , #66a6ff 100%);
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    height:1000px;
+}
+.contain{
+    /* margin-top:100px; */
+}
+.heading{
+    color:blue;
+    padding-top:100px;
+}
+.text1{
+    width: 613px;
+    height: 99px;
+    color:black;
+}
+.button2{
+    background-color: #063f5c;
+    width: 74px;
+    height: 36px;
+    color: white;
+}

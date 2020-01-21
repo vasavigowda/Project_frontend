@@ -22,9 +22,6 @@ width: 64%;
 label{
   margin-left:10px !important;
 }
-/* .frstname{
-  margin-left: -61px;
-} */
 .frstnameinput{
   margin-right: 62px;
   margin-left: 20px
@@ -55,8 +52,6 @@ background: #3B5998;
 color:white;
 border-radius:5px;
 }
-
-
 .email{
   margin-left: -91px;
 }
@@ -92,4 +87,7 @@ margin-bottom: 10px;
 }
 .regcontainer{
 margin-top: 150px !important;
+}
+.click{
+  color: #00BFFF;
 }

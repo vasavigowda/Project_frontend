@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import Nav from '../Nav/Nav';
 
 class Usersview extends Component {
   constructor(props) {
@@ -20,13 +21,9 @@ class Usersview extends Component {
     render() {
         return (
             <div> 
+              <Nav/>
                {this.state.usersview.map(name => {
-          return(
-        //     <div class="card-body" >
-        //  <b>Name:</b>{name.firstname}<br/>
-        //   <b>Email:</b>{name.email}
-        //  </div>
-            
+          return( 
              <table border="5" >
                 <tr>
               <td  style={{width:"250px",color:"red"}}>{name.firstname}<br/>{name.email}</td>

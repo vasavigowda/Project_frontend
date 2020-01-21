@@ -19,7 +19,7 @@ class Index extends Component {
 					<p>Millions of developers rely on Stack Overflow <br />to solve their coding
            problems, share siloed knowledge, and ship better code faster.</p>
         </div>
-           <section >
+           <section  id="cont">
 					<div className="row container2">
 						<div className="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 						<div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">

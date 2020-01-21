@@ -8,7 +8,7 @@
   line-height: 16px;
   color: #333333;
   font-size: 14px;
-  background:#3B5998 ;
+  background:linear-gradient(#09203f ,#537895);
   margin: 100px auto;
 }
 .login{
@@ -49,6 +49,7 @@
 }
 .emailinp{
     margin-left: 97px;
+    color: white;
 }
 .errorMsg {
     color: #cc0000;

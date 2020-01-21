@@ -48,7 +48,8 @@ class TableRow extends Component {
   }
   render() {
     return (
-      <table className="container1">
+      <div className="conttable">
+      <table className="cont">
         <div className="container2">
         <div className="question">
         <b style={{color:'red'}}>{this.props.abc+1})</b><span> </span><b>{this.props.obj.text}</b><br/> 
@@ -58,8 +59,8 @@ class TableRow extends Component {
           {this.state.answer.map(answers => {
           if (answers.question_id === this.props.obj._id) {
           return(
-          <div>
-            {answers.post}
+          <div className="answerline">
+           => {answers.post}
          </div>)}
          }
        )}
@@ -67,17 +68,18 @@ class TableRow extends Component {
           {/* <td>
             <button onClick={this.delete} className="btn btn-danger">Delete</button>
           </td> */}
-        
+          <h5 className="pstanswheading">Write your answer here</h5>
       <div className="input">
+
          <input type="text" className="inputfield" name="post" onChange={this.handlechange}></input>     
-      <span className="button2"> 
-           <button onClick={this.PostAnswer.bind(this,this.props.obj._id)}>PostAnswer</button>
+      <span className="button3"> 
+           <button className="postbtn" onClick={this.PostAnswer.bind(this,this.props.obj._id)}>PostAnswer</button>
         </span>
         </div>
         </div>
         </div>
           </table>
-     
+          </div>
     );
   }
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BrowserHistory from '../Utils/BrowserHistory'
 import {questionHandle} from '../../Action/qusetionpageAction';
+import './Questionpage.css'
+import Nav from '../Nav/Nav';
 
 class Questionpage extends Component {
     constructor(props) {
@@ -35,13 +37,14 @@ class Questionpage extends Component {
         } 
     render() {
         return (
-         
-            <div>
-                 
-            <h2>Ask question here</h2>
-            <input type="text" name= "text" placeholder="Enter a question" className=" text1" onChange={this.onHandleChange} /><br />
+            <div className ="container3">
+              <div className="contain">
+            <h2 className="heading"> Ask question here</h2>
+            <input type="text" name= "text" placeholder="Enter a question" className="text1" onChange={this.onHandleChange} /><br />
              <p  className="errorMsg " >{this.state.texterror}</p><br/>
-          <button onClick={this.onHandleClick} className="button"><b>Enter</b></button>
+          <button onClick={this.onHandleClick} className="button2"><b>Enter</b></button>
+          </div>
+          <Nav/>
             </div> 
         );
     }

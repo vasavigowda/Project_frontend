@@ -203,7 +203,8 @@ class Nav extends Component {
               <span><img src={logo} className="logo"></img></span>
               <span className="about"> <a href="/#Aboutus" >Aboutus</a></span>
               <span  className="customer"><a href="/#Product">Customer</a></span>
-              <span className="product1"><a href="/#Product" > Product</a></span>
+              <span className="product1"><a href="/#cont" > Product</a></span>
+              <span className="users"> <a href="/userview">Users</a></span>
               <input className="search" type="text" placeholder="search" ></input>
               <span className="loginbttn"> <button onClick={this.openModal } className="loginbutton">Login</button>
              </span>

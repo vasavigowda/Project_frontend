@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import  './Register.css';
+import Modal from 'react-modal';
 import BrowserHistory from '../Utils/BrowserHistory'
 import {registerHandle} from '../../Action/RegisterAction';
 import Nav from '../Nav/Nav';
+import Login from '../Login/Login';
 
 
 class Register extends Component {
 constructor(props) {
 super(props);
+this.state = {
+  isExpanded: false,
+  modalIsOpen: false
+
+};
 this.state = {
 firstname: '',
 email: '',
@@ -18,6 +25,14 @@ uerr: '',
 perr: ''
 };
 }
+
+openModal=()=> {
+  this.setState({modalIsOpen: true});
+}
+closeModal=()=> {
+  this.setState({modalIsOpen: false});
+}
+
 onHandleChange = (event) => {
 this.setState({ [event.target.name]: event.target.value });
 }
@@ -87,7 +102,13 @@ return (
           <label className="password"><b>Password</b></label>
           <input type="password" placeholder="Password" name="password" className=" passwordinput" onChange={this.onHandleChange} /><br /><br />
           <p  className="errorMsg " >{this.state.perr}</p>
-          <a href="" onClick={this.onHandleClicks}>you have already account</a>
+          <a  onClick={this.openModal} className="click" >you have already account</a>
+          <Modal className="modelbody"
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Register Modal"> 
+          <Login />
+        </Modal> 
           <p   className="errorMsg ">{this.state.phnerr}</p>
          <div><button onClick={this.onHandleClick} className="button"><b>Register</b></button>
           <button onClick={this.onHandleClicksCancel} className="buttoncancel">Cancel</button>
