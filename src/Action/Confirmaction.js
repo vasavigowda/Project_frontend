@@ -3,7 +3,7 @@ import BrowserHistory from '../Components/Utils/BrowserHistory';
 
 export function registerHandle(payload){
 const options = {
-url: 'http://localhost:4090/Signin',
+url: 'http://localhost:4090/confirm',
 method: 'POST',
 data: payload
 };
@@ -15,7 +15,7 @@ axios(options)
 .then(response => {
 console.log(response);
 sessionStorage.setItem('authentication', response.data.token)
-BrowserHistory.push('/dashboard')
+BrowserHistory.push('/forgetpasswordpage')
 
 });
 dispatch({type:'Login',payload:payload});

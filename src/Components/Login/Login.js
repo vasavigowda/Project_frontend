@@ -21,22 +21,15 @@ this.setState({ [event.target.name]: event.target.value });
 
 }
 onHandleClicks = (e) => {
-
 BrowserHistory.push('/reg'); 
-
 }
 onHandleClicksCancel = (e) => {
 BrowserHistory.push('/'); 
 }
-
-forgetpassword =(e)=>{
-    e.preventDefault();
-    const payload = {
-        email: this.state.email,
-        password: this.state.password
-    }
-    this.props.registerHandle(payload)
+confirmmail=(e)=>{
+    BrowserHistory.push('/confirmmail');
 }
+
 
 onHandleClick = (e) => {
 e.preventDefault();
@@ -79,7 +72,7 @@ return (
 <div className="errorMsg"> {this.state.uerr}</div>
 <label ><b className="emailinp">Password</b></label><br />
 <div className="forget">
-<label className="forgetpassword" onClick={this.forgetpassword}>Forget Password</label></div>
+<a onClick={this.confirmmail} className="forgetpassword">Forget Password</a></div>
 <div> <input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br /></div>
 <div className="errorMsg"> {this.state.perr}</div>
 <p >{this.state.phnerr}</p>
