@@ -13,6 +13,7 @@ email: '',
 password: '',
 uerr: '',
 perr: ''
+
 };
 }
 onHandleChange = (event) => {
@@ -26,10 +27,15 @@ BrowserHistory.push('/reg');
 onHandleClicksCancel = (e) => {
 BrowserHistory.push('/'); 
 }
-confirmmail=(e)=>{
-    BrowserHistory.push('/confirmmail');
-}
+// confirmmail=(e)=>{
+//     BrowserHistory.push('/confirmmail', email=this.state.email);
+// }
 
+confirmmail = () => {
+    const {mail} = this.props.email;
+    // if(email)
+     BrowserHistory.push('/confirmmail');
+   }
 
 onHandleClick = (e) => {
 e.preventDefault();
@@ -61,6 +67,7 @@ this.props.registerHandle(payload);
 
 render() {
 return (
+   
 
  <div id="login">
 <div id="register1" className="login">
@@ -68,7 +75,7 @@ return (
  <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
 <form method="post">
 <label ><b className="emailinp">Email</b></label><br />
- <input type="text" name="email" className="one" onChange={this.onHandleChange} /><br />
+ <input type="text" name="email"  className="one" onChange={this.onHandleChange} /><br />
 <div className="errorMsg"> {this.state.uerr}</div>
 <label ><b className="emailinp">Password</b></label><br />
 <div className="forget">

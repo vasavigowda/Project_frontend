@@ -1,8 +1,11 @@
 import RegisterReducer from './RegisterReducer';
 import Loginreducer from './Loginreducer';
 import questionpageReducer from './questionpageReducer';
-import { combineReducers } from 'redux';
 import Confirmreducer from './Confirmreducer';
+import ResetReducer from './ResetReducer'
+import { combineReducers } from 'redux';
+
+
 export default combineReducers({
-RegisterReducer,Loginreducer,questionpageReducer,Confirmreducer
+RegisterReducer,Loginreducer,questionpageReducer,Confirmreducer,ResetReducer
 })

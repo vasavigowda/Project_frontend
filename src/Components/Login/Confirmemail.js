@@ -11,6 +11,7 @@ class Confirmemail extends Component {
         usersview: []
         };
    }
+
    onHandleChange = (event) => {
 
     this.setState({ [event.target.name]: event.target.value });
@@ -37,10 +38,11 @@ class Confirmemail extends Component {
     }
    
  render() {
+  const email = this.props.email
       return (
-        <div>
+        <div>  
         <label ><b className="emailinp">Email</b></label><br />
-        <input type="text" name="email" className="one" onChange={this.onHandleChange}/><br />
+        <input type="text" defaultValue={email} className="one" onChange={this.onHandleChange} /><br />
         <div className="errorMsg"> {this.state.uerr}</div>
         <button onClick={this.onHandleClick} className="button11"><b>Confirm</b></button>
               

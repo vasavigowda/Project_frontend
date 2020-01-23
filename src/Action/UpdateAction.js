@@ -1,9 +1,7 @@
-import axios from 'axios';
-
-export function updateHandle1(payload) {
+export function updateHandle(payload) {
     console.log(payload._id)
     const options = {
-    url: "http://localhost:4090/reset/"+payload._id,
+    url: "http://localhost:3001/Desktop/"+payload._id,
     method: 'PUT',
     data: payload
     };
@@ -13,6 +11,6 @@ export function updateHandle1(payload) {
     .then(response => {
     console.log(response.status);
     });
-    dispatch({ type: 'Login', payload: payload });
+    dispatch({ type: 'REGISTER', payload: payload });
     }
     }

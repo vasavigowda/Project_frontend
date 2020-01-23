@@ -36,7 +36,7 @@ function App() {
         <PrivateRoute exact path='/Allpost' component={AllPost}></PrivateRoute>
         <PrivateRoute exact path='/Allpost' component={PostForm}></PrivateRoute>
         <PrivateRoute exact path='/quest' component={Questionpage}></PrivateRoute>
-        {/* <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route> */}
+        <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route>
         <Route exact path='/confirmmail' component={Confirmemail}></Route>
         <Route exact path='/userview' component={Usersview}></Route>
         </switch>
