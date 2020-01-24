@@ -27,15 +27,16 @@ BrowserHistory.push('/reg');
 onHandleClicksCancel = (e) => {
 BrowserHistory.push('/'); 
 }
-// confirmmail=(e)=>{
-//     BrowserHistory.push('/confirmmail', email=this.state.email);
-// }
+confirmmail=(e)=>{
+    sessionStorage.setItem('change',this.state.email)
+    BrowserHistory.push('/confirmmail');
+}
 
-confirmmail = () => {
-    const {mail} = this.props.email;
-    // if(email)
-     BrowserHistory.push('/confirmmail');
-   }
+// confirmmail = (e) => {
+//     // const {mail} = this.props.email;
+//     // if(email)
+//      BrowserHistory.push('/confirmmail');
+//    }
 
 onHandleClick = (e) => {
 e.preventDefault();

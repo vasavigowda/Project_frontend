@@ -13,6 +13,7 @@ import Questionpage from './Components/Dashboard/Questionpage';
 import Forgetpassword from './Components/Login/Forgetpassword';
 import Usersview from './Components/Dashboard/Usersview';
 import Confirmemail from './Components/Login/Confirmemail';
+import Highlight from './Components/Dashboard/Highlight';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
   <Route
@@ -39,6 +40,8 @@ function App() {
         <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route>
         <Route exact path='/confirmmail' component={Confirmemail}></Route>
         <Route exact path='/userview' component={Usersview}></Route>
+        <Route exact path='/highlight' component={Highlight}></Route>
+
         </switch>
       </Router>
      

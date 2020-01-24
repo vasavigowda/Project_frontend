@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Forgetpassword.css';
 
 class Forgetpassword extends Component {
     constructor(props) {
@@ -9,8 +10,20 @@ class Forgetpassword extends Component {
           password:''
            }
         }
+
+        handlechange=(e)=>{
+          debugger
+          this.setState({password:e.target.value})
+        }
     changepassw = () => {
-        axios.put(`http://localhost:4090/signin/id${this.props.obj.id}`)
+      debugger
+      const payload = {
+        email: sessionStorage.getItem('change'),
+        password: this.state.password
+        }
+        console.log(payload)
+      
+        axios.put(`http://localhost:4090/reset`,payload)
           .then(console.log('update'))
           .catch(err => console.log(err))
         window.location.reload();
@@ -20,11 +33,10 @@ class Forgetpassword extends Component {
     render() {
 
         return (
-            <div>
-                <label>New Password</label>
-                <input type="text" placeholder="enter new password"></input>
-       
-            <button onClick={this.changepassw} className="btn btn-danger">change password</button>
+            <div className="frgtpassw">
+                <label>New Password</label><br/>
+                <input type="text" onChange={this.handlechange} placeholder="enter new password"></input><br/>
+            <button onClick={this.changepassw} name="password" className="btn btn-danger">change password</button>
             </div>
         )
     }

@@ -1,0 +1,15 @@
+strong {
+    background: blue;
+    color: green;
+    font-weight: inherit;
+    margin-top:40px;
+  }
+  .highlightpage{
+    margin-top:40px;
+  }
+  #myText{
+    margin-top: 114px;
+  }
+  .usersviewpage{
+      margin-top: 100px;
+  }
