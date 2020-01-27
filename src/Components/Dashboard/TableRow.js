@@ -65,9 +65,9 @@ class TableRow extends Component {
          }
        )}
        </div>
-          {/* <td>
+          <td>
             <button onClick={this.delete} className="btn btn-danger">Delete</button>
-          </td> */}
+          </td>
           <h5 className="pstanswheading">Write your answer here</h5>
       <div className="input">
 

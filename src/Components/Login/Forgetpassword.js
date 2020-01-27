@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Forgetpassword.css';
+import BrowserHistory from '../Utils/BrowserHistory';
 
 class Forgetpassword extends Component {
     constructor(props) {
@@ -27,16 +28,17 @@ class Forgetpassword extends Component {
           .then(console.log('update'))
           .catch(err => console.log(err))
         window.location.reload();
+        BrowserHistory.push('/forgetmsg')
       }
- 
+     
     
     render() {
 
         return (
             <div className="frgtpassw">
-                <label>New Password</label><br/>
-                <input type="text" onChange={this.handlechange} placeholder="enter new password"></input><br/>
-            <button onClick={this.changepassw} name="password" className="btn btn-danger">change password</button>
+                <h6 className="passw">Enter new Password</h6><br/>
+                <input type="text" onChange={this.handlechange} placeholder="enter new password"></input><br/><br/>
+            <button onClick={this.changepassw} name="password" className="chngbtn">change password</button>
             </div>
         )
     }

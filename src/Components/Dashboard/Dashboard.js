@@ -34,7 +34,7 @@ class Dashboard extends Component {
                  <div className="row container">
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                      <h3 className="questcount">All questions</h3>
-                     <h3>{this.state.Users.length}</h3>
+                     <h3 className="quescount">{this.state.Users.length}</h3>
                 </div>
                 <div className= "col-xs-6 col-sm-6 col-md-6 col-lg-6"><button className="questioninp">
                     <a href="/quest" className ="quescolor">Ask Question</a></button></div>

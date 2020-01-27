@@ -6,14 +6,11 @@ import Login from './Components/Login/Login';
 import Index from './Components/Index/Index';
 import Register from './Components/Register/Register';
 import Dashboard from './Components/Dashboard/Dashboard';
-import Userquestion from './Components/Userquestion/Userquestion';
-import AllPost from './Components/Userquestion/AllPost';
-import PostForm from './Components/Userquestion/PostForm';
+// import Userquestion from './Components/Userquestion/Userquestion';
 import Questionpage from './Components/Dashboard/Questionpage';
 import Forgetpassword from './Components/Login/Forgetpassword';
 import Usersview from './Components/Dashboard/Usersview';
-import Confirmemail from './Components/Login/Confirmemail';
-import Highlight from './Components/Dashboard/Highlight';
+import Forgetmessage from './Components/Login/Forgetmessage';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
   <Route
@@ -32,15 +29,13 @@ function App() {
         <Route exact path='/' component={Index}></Route> 
         <Route exact path='/reg' component={Register}></Route> 
         <Route exact path='/login' component={Login}></Route> 
+        <PrivateRoute exact path='/forgetmsg' component={Forgetmessage}></PrivateRoute>
         <PrivateRoute exact path='/dashboard' component={Dashboard}></PrivateRoute>
-        <PrivateRoute exact path='/Userquestion' component={Userquestion}></PrivateRoute>
-        <PrivateRoute exact path='/Allpost' component={AllPost}></PrivateRoute>
-        <PrivateRoute exact path='/Allpost' component={PostForm}></PrivateRoute>
-        <PrivateRoute exact path='/quest' component={Questionpage}></PrivateRoute>
+        {/* <Route exact path='/Userquestion' component={Userquestion}></Route> */}
+        <Route exact path='/quest' component={Questionpage}></Route>
         <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route>
-        <Route exact path='/confirmmail' component={Confirmemail}></Route>
         <Route exact path='/userview' component={Usersview}></Route>
-        <Route exact path='/highlight' component={Highlight}></Route>
+
 
         </switch>
       </Router>

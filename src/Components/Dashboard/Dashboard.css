@@ -7,17 +7,24 @@
 .questcount{
     font-size:50px;
     color:black;
+    margin-left: 121px;
+}
+.quescount{
+    margin-left: 121px;
 }
 .questioninp{
     background-color: #1287ea;
     color: white !important;
     margin-top:4%;
-    width: 124px;
+    width: 144px;
     height: 47px;
-    font-size: 17px;
+    font-size: 21px;
+    margin-left: 309px;
 }
 .quescolor{
-    color: white !important;
+    color:black;
+    font: small;
+
 }
 .table{
     width:80%;

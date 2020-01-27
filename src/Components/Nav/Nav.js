@@ -197,7 +197,7 @@ class Nav extends Component {
 					<Navigation>
 
 						<nav className="nav navbar-header">
-							<i	className="fa fa-bars"	aria-hidden="true"
+							<i	className="fa fa-bars" 	aria-hidden="true"
 								onClick={e => this.handleToggle(e)}/>
 							<ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
               <span><img src={logo} className="logo"></img></span>

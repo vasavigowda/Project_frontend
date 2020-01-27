@@ -4,11 +4,14 @@ import logo from '../Images/image2.jpeg';
 import about from '../Images/img2.jpeg';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
+import imag from '../Images/imag4.jpeg';
+import imag1 from '../Images/imag2.jpeg';
+import imag2 from '../Images/imag3.jpeg';
 
 class Index extends Component {
 	render() {
 		return (
-			<div>
+			<div className="index">
 				<Nav /><br />
 				<div className="container1">
 					<div >
@@ -80,6 +83,25 @@ class Index extends Component {
 								<div className="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 							</div>
 					
+					</section>
+					<section>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						<img src={imag}></img>
+						</div>
+						<div class="carousel-item">
+						<img src={imag1}></img>
+						</div>
+						<div class="carousel-item">
+						<img src={imag2}></img>
+						</div>
+						</div>
+						<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+						</a>
 					</section>
 				</div>
 				<Footer />

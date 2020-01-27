@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Nav from '../Nav/Nav';
-import './Highlight.css';
 
 
 class Usersview extends Component {
@@ -13,7 +12,6 @@ class Usersview extends Component {
       usersview: [],
       text: this. initialText,
       inputValue: "",
-
       };
      }
    componentDidMount(){

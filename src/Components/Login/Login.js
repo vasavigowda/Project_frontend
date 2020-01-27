@@ -29,7 +29,7 @@ BrowserHistory.push('/');
 }
 confirmmail=(e)=>{
     sessionStorage.setItem('change',this.state.email)
-    BrowserHistory.push('/confirmmail');
+    BrowserHistory.push('/forgetpasswordpage');
 }
 
 // confirmmail = (e) => {

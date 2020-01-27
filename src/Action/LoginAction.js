@@ -13,10 +13,12 @@ return function(dispatch)
     console.log(payload)
 axios(options)
 .then(response => {
+    // if (response.data.msg === 'success') {
+    //     alert("Message sent successfully.");
+    // }
 console.log(response);
 sessionStorage.setItem('authentication', response.data.token)
 BrowserHistory.push('/dashboard')
-
 });
 dispatch({type:'Login',payload:payload});
 }

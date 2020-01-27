@@ -4,16 +4,17 @@
 .question{
    /* color:black; */
    font-size: xx-large;
-   margin-right: 713px;
+  margin-right: 479px;
 }
 .input{
     margin-left: 781px;
 }
 .inputfield{
-    width: 211px;
+    width: 300px;
     height: 61px;
     color: white;
-    background:linear-gradient(to bottom,#434343 , #000000);
+    background-color: #78706f;
+    /* background:linear-gradient(to bottom,#434343 , #000000); */
 }
 .button3{
     margin-top: 10px;
@@ -36,4 +37,5 @@
     padding:10px;
     font-size:16px;
     color: black;
+    margin-right: 121px;
 }
