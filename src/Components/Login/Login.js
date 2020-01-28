@@ -32,12 +32,6 @@ confirmmail=(e)=>{
     BrowserHistory.push('/forgetpasswordpage');
 }
 
-// confirmmail = (e) => {
-//     // const {mail} = this.props.email;
-//     // if(email)
-//      BrowserHistory.push('/confirmmail');
-//    }
-
 onHandleClick = (e) => {
 e.preventDefault();
 const payload = {
@@ -75,13 +69,14 @@ return (
 <button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
  <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
 <form method="post">
-<label ><b className="emailinp">Email</b></label><br />
+<label ><b className="emailinp">Email</b></label>
  <input type="text" name="email"  className="one" onChange={this.onHandleChange} /><br />
 <div className="errorMsg"> {this.state.uerr}</div>
-<label ><b className="emailinp">Password</b></label><br />
+<label ><b className="emailinp">Password</b></label>
+<div> <input type="password" name="password" className="one" onChange={this.onHandleChange} />
+</div>
 <div className="forget">
-<a onClick={this.confirmmail} className="forgetpassword">Forget Password</a></div>
-<div> <input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br /></div>
+<a onClick={this.confirmmail} className="forgetpassword">Forget Password?</a></div>
 <div className="errorMsg"> {this.state.perr}</div>
 <p >{this.state.phnerr}</p>
 <button onClick={this.onHandleClick} className="button11"><b>Login</b></button>

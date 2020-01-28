@@ -1,6 +1,5 @@
 .index{
     background: linear-gradient(to bottom, #89f7fe , #66a6ff 100%);
-
 }
 .h1{
     color: cadetblue;
@@ -31,6 +30,21 @@ h6{
 }
 .container2{
     width:100%;
+}
+.imag1{
+    width: 38%;
+    height: 5%;
+    border-radius: 8%;
+}
+.imag2{
+    width: 36%;
+    height: 5%;
+    border-radius: 8%;
+}
+.imag3{
+    width: 60%;
+    height: 20%;
+    border-radius: 8%;
 }
 /* .aboutus{
     margin-top:561px;

@@ -106,7 +106,7 @@ const Navigation = styled.header`
     display: block;
     position: relative;
     .logo {
-      width: 53%;
+      width: 11% !important;
       height: 50%;
       display: block;
       padding-top: 20px;

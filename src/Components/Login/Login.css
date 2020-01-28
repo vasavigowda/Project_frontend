@@ -17,7 +17,7 @@
 .socialicon{
     height: 31px;
     width: 53%;
-    margin-left: 98px;
+    margin-left: 88px;
     background: #3B5998;
     color:white;
     border-radius:5px;
@@ -40,7 +40,7 @@
 .googleicon{
     height: 31px;
     width: 53%;
-    margin-left: 98px;
+    margin-left: 88px;
     border-radius: 10px;
     background: #E67E22 ;
     color:white;
@@ -48,7 +48,7 @@
     margin-top: 14px;
 }
 .emailinp{
-    margin-left: 97px;
+    margin-left: 81px;
     color: white;
 }
 .errorMsg {
@@ -59,7 +59,7 @@
     background-color: #00BFFF;
     border-color: #3ac162;
     font-weight: bold;
-   margin-left: 171px;
+    margin-left: 146px;
     color: #ffffff;
     width: 62px;
     height: 34px;
@@ -70,9 +70,14 @@
   .forget{
     margin-left: 202px;
     color: #ffffff;
+    font-size:15px;
+    font-weight: bold;
   }
   .cancel{
     margin-left:20px;
     background-color: #00BFFF;
-    color: #ffffff;
+    color: #ffffff !important;
+    font-weight: bold;
+    width: 62px;
+    height: 34px;
   }

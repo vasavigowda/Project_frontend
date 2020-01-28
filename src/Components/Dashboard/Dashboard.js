@@ -39,7 +39,7 @@ class Dashboard extends Component {
                 <div className= "col-xs-6 col-sm-6 col-md-6 col-lg-6"><button className="questioninp">
                     <a href="/quest" className ="quescolor">Ask Question</a></button></div>
                 </div>  
-                <table style={{ marginTop: 20 }}>
+                <table style={{marginTop: 20 }}>
                 <tbody>
                 { this.tabRow() }
                 </tbody>

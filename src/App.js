@@ -11,6 +11,7 @@ import Questionpage from './Components/Dashboard/Questionpage';
 import Forgetpassword from './Components/Login/Forgetpassword';
 import Usersview from './Components/Dashboard/Usersview';
 import Forgetmessage from './Components/Login/Forgetmessage';
+import Search from './Components/Dashboard/Search';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
   <Route
@@ -29,6 +30,7 @@ function App() {
         <Route exact path='/' component={Index}></Route> 
         <Route exact path='/reg' component={Register}></Route> 
         <Route exact path='/login' component={Login}></Route> 
+        <Route exact path='/search' component={Search}></Route> 
         <PrivateRoute exact path='/forgetmsg' component={Forgetmessage}></PrivateRoute>
         <PrivateRoute exact path='/dashboard' component={Dashboard}></PrivateRoute>
         {/* <Route exact path='/Userquestion' component={Userquestion}></Route> */}
