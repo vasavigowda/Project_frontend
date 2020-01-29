@@ -112,6 +112,11 @@ const Navigation = styled.header`
       padding-top: 20px;
       margin: 0px;
       margin-left: -5px;
+      .search{
+        width:50%;
+        margin-right: 203px;
+        margin-top: 10px;
+      }
       a {
         padding: 20px 0px;
       }
@@ -204,11 +209,10 @@ class Nav extends Component {
               <span className="about"> <a href="/#Aboutus" >Aboutus</a></span>
               <span  className="customer"><a href="/#Product">Customer</a></span>
               <span className="product1"><a href="/#cont" > Product</a></span>
-              <span className="users"> <a href="/userview">Users</a></span>
+              <span className="users"> <a href="/search">Users</a></span>
               <input className="search" type="text" placeholder="search" ></input>
               <span className="loginbttn"> <button onClick={this.openModal } className="loginbutton">Login</button>
              </span>
-             
              <Modal className="modelbody"
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}

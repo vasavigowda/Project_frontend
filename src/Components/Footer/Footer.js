@@ -45,7 +45,7 @@ class Footer extends Component {
      </div>
      <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
   
-     <a href="https://www.google.co.in/" className="ggllogo">Facebook</a>
+     <a href="https://www.facebook.com" className="ggllogo">Facebook</a>
      <a href="https://www.google.co.in/"  className="fblogo">Google</a>
  
      </div>

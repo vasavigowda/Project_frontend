@@ -3,6 +3,7 @@ import TableRow from './TableRow';
 import axios from 'axios'
 import Nav from '../Nav/Nav';
 import './Dashboard.css';
+import Footer from '../Footer/Footer';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class Dashboard extends Component {
                 { this.tabRow() }
                 </tbody>
                 </table>
+                <Footer/>
             </div>
         );
     }

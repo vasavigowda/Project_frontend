@@ -1,0 +1,18 @@
+.searchpage{
+    background:url('../Images/img4.jpg');
+    background-size:cover;
+    /* height: 1000px; */
+    background-image: no-repeat;
+    
+}
+.inputfieldsearch{
+    margin-top:8%;
+    margin-left: 3%;
+    
+}
+.logintable{
+    color: red;
+    margin-top: 5%;
+    margin-left: 41%;
+    margin-bottom: 100px;
+}

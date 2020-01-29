@@ -40,7 +40,6 @@ onHandleClicksCancel = (e) => {
 BrowserHistory.push('/'); 
 }
 
-
 onHandleClick = (e) => {
 e.preventDefault();
 const payload = {
@@ -53,7 +52,6 @@ this.setState({
 ferr: "Firstname is required", 
 uerr: "Email is required",
 perr: "Password is required"
-
 })
 }
 else if (this.state.firstname.length === 0) {
@@ -74,9 +72,13 @@ this.setState({ uerr: "Please enter the valid email" })
 else if (!this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/)) {
 this.setState({ perr: "Please enter the valid password" })
 }
-else
+else 
+BrowserHistory.push('/login')
 this.props.registerHandle(payload);
 }
+
+
+
 
 
 render() {

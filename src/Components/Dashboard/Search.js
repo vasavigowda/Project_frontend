@@ -1,72 +1,51 @@
-// import React, { Component } from 'react';
-// import axios from 'axios'
-// class Search extends Component {
+import React, { Component } from 'react';
+import axios from 'axios';
+import Nav from '../Nav/Nav';
+import './Search.css';
+import Footer from '../Footer/Footer';
 
-//   state = {
-//     query: "",
-//     data: [],
-//     filteredData: []
-//   };
-
-//   handleInputChange = event => {
-//     const query = event.target.value;
-
-//     this.setState(prevState => {
-//       const filteredData = prevState.data.filter(element => {
-//         return 
-//         // element.name.toLowerCase().includes(query.toLowerCase());
-//       });
-
-//       return {
-//         query,
-//         filteredData
-//       };
-//     });
-//   };
-
-//   getData = () => {
-//    axios. get(`http://localhost:4090/Signin`)
-//       // .then(response => response.json())
-//       // .then(data => {
-//       //   const { query } = this.state;
-//       //   const filteredData = data.filter(element => {
-//       //     return
-//       //     //  element.name.toLowerCase().includes(query.toLowerCase());
-//       //   });
-//         .then(response => {
-//           this.setState({usersview: response.data });
-//            })
-//            .catch(function (error) {
-//             console.log(error);
-//               })
-//             }  
-            
-
-//         // this.setState({
-//         //   data,
-//         //   filteredData
-//         // });
-//   //     });
-//   // };
-
-//   componentWillMount() {
-//     this.getData();
-//   }
-
-//   render() {
-//     return (
-//       <div className="searchForm">
-//         <form>
-//           <input
-//             placeholder="Search for..."
-//             value={this.state.query}
-//             onChange={this.handleInputChange}
-//           />
-//         </form>
-//         <div>{this.state.filteredData.map(i => <p>{i.name}</p>)}</div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Search;
+var libraries;
+class Search extends Component {
+  state = {
+    data: [],
+    search: ''
+  }
+  componentDidMount = () => {
+    axios.get('http://localhost:4090/Signin')
+      .then(res => {
+        this.setState({ data: res.data });
+      });
+  }
+  handleChange = (e) => {
+    this.setState({ search: e.target.value })
+  }
+  render() {
+    var searchString = this.state.search.trim().toLowerCase(), library = this.state.data;
+    if (searchString.length > 0) {
+      library = library.filter(function (i) {
+        return i.firstname.toLowerCase().match(searchString)
+      });
+    }
+    return (
+      <div className="searchpage">
+        <input type="text" className="inputfieldsearch" value={this.state.search} onChange={this.handleChange}></input>
+        <table border="2" className="logintable">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          {library.map(function (i) {
+            return <tr>
+              <td>{i.firstname}</td>
+              <td>{i.email}</td>
+            </tr>
+          })
+          }
+        </table>
+        <Nav />
+        <Footer/>
+      </div>
+    );
+  }
+}
+export default Search;
