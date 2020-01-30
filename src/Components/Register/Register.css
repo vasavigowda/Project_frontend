@@ -89,5 +89,7 @@ margin-bottom: 10px;
 margin-top: 150px !important;
 }
 .click{
-  color: #00BFFF;
+  color:#3B5998!important;
+  font-size:14px;
+  font-weight: bold;
 }

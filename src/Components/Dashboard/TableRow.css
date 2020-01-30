@@ -2,7 +2,6 @@
     background: linear-gradient(to bottom, #89f7fe 100%, #66a6ff 100%);
 }
 .question{
-   /* color:black; */
    font-size: xx-large;
   margin-right: 479px;
 }
@@ -14,7 +13,6 @@
     height: 61px;
     color: white;
     background-color: #78706f;
-    /* background:linear-gradient(to bottom,#434343 , #000000); */
 }
 .button3{
     margin-top: 10px;

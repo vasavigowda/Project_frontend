@@ -93,8 +93,8 @@ return (
       </div>
       <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div id="register">
-          <button className="googleicon1"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
-          <button className="socialicon1"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
+          <button className="googleicon1"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login  with google</button><br/><br/>
+          <button className="socialicon1"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login  with facebook</button><br/><br/>
           <label className="frstname"><b>Display Name</b></label>
           <input type="text" name= "firstname" placeholder="display name" className=" frstnameinput" onChange={this.onHandleChange} /><br />
           <p  className="errorMsg " >{this.state.ferr}</p>
@@ -104,7 +104,7 @@ return (
           <label className="password"><b>Password</b></label>
           <input type="password" placeholder="Password" name="password" className=" passwordinput" onChange={this.onHandleChange} /><br /><br />
           <p  className="errorMsg " >{this.state.perr}</p>
-          <a  onClick={this.openModal} className="click" >you have already account</a>
+          <a  onClick={this.openModal} className="click" >Already  have an account? Login here!</a>
           <Modal className="modelbody"
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}

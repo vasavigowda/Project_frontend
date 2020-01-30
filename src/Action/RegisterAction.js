@@ -14,7 +14,7 @@ return function(dispatch)
 axios(options)
 .then(response => {
 console.log(response.status);
-// BrowserHistory.push('/login')
+BrowserHistory.push('/login')
 });
 dispatch({type:'REGISTER',payload:payload});
 }

@@ -66,8 +66,8 @@ return (
 
  <div id="login">
 <div id="register1" className="login">
-<button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login in with google</button><br/><br/>
- <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login in with facebook</button><br/><br/>
+<button className="googleicon"><a href="https://www.google.co.in/" class="fa fa-google"></a>Login  with google</button><br/><br/>
+ <button className="socialicon"><a href="http://facebook.com/jaketrent" class="fa fa-facebook"></a>Login  with facebook</button><br/><br/>
 <form method="post">
 <label ><b className="emailinp">Email</b></label>
  <input type="text" name="email"  className="one" onChange={this.onHandleChange} /><br />
