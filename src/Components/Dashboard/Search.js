@@ -28,14 +28,15 @@ class Search extends Component {
     }
     return (
       <div className="searchpage">
+  
         <input type="text" className="inputfieldsearch" value={this.state.search} onChange={this.handleChange}></input>
         <table border="2" className="logintable">
-          <tr>
+          <tr className="tableheading">
             <th>Name</th>
             <th>Email</th>
           </tr>
           {library.map(function (i) {
-            return <tr>
+            return <tr className="tabledata">
               <td>{i.firstname}</td>
               <td>{i.email}</td>
             </tr>
@@ -44,6 +45,7 @@ class Search extends Component {
         </table>
         <Nav />
         <Footer/>
+ 
       </div>
     );
   }

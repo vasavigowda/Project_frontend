@@ -28,15 +28,12 @@ function App() {
         <Route exact path='/reg' component={Register}></Route> 
         <Route exact path='/login' component={Login}></Route> 
         <Route exact path='/search' component={Search}></Route> 
-        <PrivateRoute exact path='/forgetmsg' component={Forgetmessage}></PrivateRoute>
         <PrivateRoute exact path='/dashboard' component={Dashboard}></PrivateRoute>
+        <PrivateRoute exact path='/forgetmsg' component={Forgetmessage}></PrivateRoute>
         <Route exact path='/quest' component={Questionpage}></Route>
         <Route exact path='/forgetpasswordpage' component={Forgetpassword}></Route>
-
-
         </switch>
       </Router>
-     
     </div>
   );
 }

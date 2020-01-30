@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from '../Images/image2.jpeg';
 import Modal from 'react-modal';
-import './Nav.css';
+import './Navbar.css';
 // import { BurgerIcon } from './'
 import styled from "styled-components";
 import BrowerHistory from '../Utils/BrowserHistory';
 import Login from "../Login/Login";
+
 
 const Navigation = styled.header`
   width: 100%;
@@ -167,66 +168,63 @@ const Navigation = styled.header`
   }
 `;
 
-class Nav extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       isExpanded: false,
       modalIsOpen: false
-    
-		};
-	}
-	handleToggle(e) {
-		e.preventDefault();
-		this.setState({
-			isExpanded: !this.state.isExpanded
-		});
+
+    };
   }
-  openModal=()=> {
-    this.setState({modalIsOpen: true});
+  handleToggle(e) {
+    e.preventDefault();
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
   }
-  closeModal=()=> {
-    this.setState({modalIsOpen: false});
+  openModal = () => {
+    this.setState({ modalIsOpen: true });
   }
- 
-  onHandleClick(){
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
+  }
+  onClick() {
+
+    sessionStorage.removeItem('authentication');
+    BrowerHistory.push('/');
+  }
+  onHandleClick() {
     BrowerHistory.push('/reg');
-    }
+  }
 
-	render() {
-		const { isExpanded } = this.state;
+  render() {
+    const { isExpanded } = this.state;
 
-		return (
-			<div className="row">
-				<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<Navigation>
+    return (
+      <div className="row">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <Navigation>
 
-						<nav className="nav navbar-header">
-							<i	className="fa fa-bars" 	aria-hidden="true"
-								onClick={e => this.handleToggle(e)}/>
-							<ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-              <span><img src={logo} className="logo"></img></span>
-              <span className="about"> <a href="/#About" >Aboutus</a></span>
-              <span  className="customer"><a href="/#customer">Customer</a></span>
-              <span className="product1"><a href="/#" > Product</a></span>
-              <span className="users"> <a href="/search">Users</a></span>
-              <input className="search" type="text" placeholder="search" ></input>
-              <span className="loginbttn"> <button onClick={this.openModal } className="loginbutton">Login</button>
-             </span>
-             <Modal className="modelbody"
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel="Register Modal"> 
-          <Login />
-        </Modal> 
-              <span className="signbttn"><button onClick={this.onHandleClick} className="loginbutton">Signup</button></span>
-							</ul>
-						</nav>
-					</Navigation>
-				</div>
-			</div>
-		);
-	}
+            <nav className="nav navbar-header">
+              <i className="fa fa-bars" aria-hidden="true"
+                onClick={e => this.handleToggle(e)} />
+              <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+                <span><img src={logo} className="logo"></img></span>
+                <span className="about"> <a href="/#About" >Aboutus</a></span>
+                <span className="customer"><a href="/#customer">Customer</a></span>
+                <span className="product1"><a href="/#" > Product</a></span>
+                <span className="users"> <a href="/search">Users</a></span>
+                <input className="search" type="text" placeholder="search" ></input>
+                <span className="loginbttn"> <button onClick={this.onClick} className="loginbutton">Logout</button>
+                </span>
+              </ul>
+            </nav>
+          </Navigation>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Nav;
+export default Navbar;

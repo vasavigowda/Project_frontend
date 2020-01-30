@@ -1,0 +1,50 @@
+.logo{
+    width: 155% !important;
+    float: left !important;
+    margin-top: 10px !important;
+  }
+  
+  .about{
+    margin-right: 38px;
+    margin-top:17px;
+    margin-left: 39px;
+  }
+  .customer{
+    margin-right: 48px;
+    margin-top:17px;
+  }
+  .product1{
+    margin-right: 43px;
+    margin-top:17px;
+  }
+  .users{
+    margin-right: 43px;
+    margin-top:17px;
+  }
+  .searchbtn{
+    margin-right: 43px;
+    margin-top:12px;
+  }
+  .search{
+    width:200%;
+    margin-right: 203px;
+    margin-top: 10px;
+  }
+  .loginbttn{
+    margin-right: 30px;
+    margin-top: 17px;
+  }
+  .signbttn{
+    margin-top:17px;
+    margin-right: 10px;
+  }
+  .loginbutton{
+    background-color: #33ccff;
+    color: white;
+  }
+  .loginbutton :hover{
+    background-color: blue;
+  }
+  .modelbody{
+    width: 10%;
+  }

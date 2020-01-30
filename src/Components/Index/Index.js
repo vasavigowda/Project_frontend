@@ -54,28 +54,45 @@ class Index extends Component {
             </div>
             <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
           </div>
-        </section><br />
-        <section>
-          <div className="slide-container">
-            <Fade  {...fadeProperties}>
-              <div className="each-fade">
-                <div className="image-container">
-                  <img className="imag1" src={imag} />
+        </section><br /><br/><br/><br/>
+        <div className="customerpage">
+        <section id="customer">
+        <div class="card-columns">
+            <div class=" one_card">
+              <div class="card" >
+                <img class="card-img-top" src={imag} className="imag1"/>
+                <div class="card-body">
+                  <p class="card_text_info">Unlike office workers, remote employees don’t have the ability
+                   to tap their colleagues when they need help. To do remote work well, knowledge should be easily
+                    accessible to anyone</p>
                 </div>
               </div>
-              <div className="each-fade">
-                <div className="image-container">
-                  <img className="imag2" src={imag1} />
+            </div>
+            <div class=" one_card">
+              <div class="card" >
+                <img class="card-img-top" src={imag1} className="imag2" />
+                <div class="card-body">
+                  <p class="card_text_info">Stack Overflow’s powerful Q&A engine works so well for public 
+                  and private knowledge-sharing that some of our customers are using it with their customers. 
+                  Stack Overflow Enterprise </p>
                 </div>
               </div>
-              <div className="each-fade">
-                <div className="image-container">
-                  <img className="imag3" src={imag2} />
+            </div>
+            <div class="one_card">
+              <div class="card" >
+                <img class="card-img-top" src={imag2} className="imag3" />
+                <div class="card-body">
+                  <p class="card_text_info">Contractors bring outside
+                   expertise into your organization and free up your time, ideally.
+                    One of the challenges of working with contractors is making sure 
+                    they know what they need to know </p>
+
                 </div>
               </div>
-            </Fade>
-          </div>
+            </div>
+            </div>
         </section>
+        </div>
         <div className="aboutus">
           <section id="Aboutus">
             <h2> Learn and grow with Stack Overflow</h2>
@@ -85,7 +102,7 @@ class Index extends Component {
           </section>
         </div><br />
         <div className="product">
-          <section id="Product" >
+          <section id="About" >
             <div>
               <h1>For developers, by developers </h1>
               <p>Stack Overflow is an open community for

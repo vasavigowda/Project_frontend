@@ -57,7 +57,6 @@
   }
   .button11 {
     background-color: #00BFFF;
-    border-color: #3ac162;
     font-weight: bold;
     margin-left: 146px;
     color: #ffffff;
@@ -80,4 +79,7 @@
     font-weight: bold;
     width: 62px;
     height: 34px;
+  }
+  .cancel1{
+    color: white;
   }

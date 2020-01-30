@@ -63,7 +63,6 @@ margin-left: 88px;
 }
 .button {
 background-color: #00BFFF;
-border-color: #3ac162;
 font-weight: bold;
 width: 74px;
 height: 35px;
@@ -71,8 +70,9 @@ margin-left: 44px;
 color:white
 }
 .buttoncancel{
-width: 57px;
-  height: 28px;
+  width: 74px;
+  height: 35px;
+  font-weight: bold;
 margin-left: 10px;
 color: #ffffff;
 background-color: #00BFFF;

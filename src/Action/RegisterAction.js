@@ -2,6 +2,7 @@ import axios from 'axios'
 import BrowserHistory from '../Components/Utils/BrowserHistory';
 
 export function registerHandle(payload){
+    debugger
 const options = {
 url: 'http://localhost:4090/Signup',
 method: 'POST',

@@ -27,16 +27,5 @@ export function registerHandle(payload) {
 
   }
 }
-//     console.log(payload)
-// axios(options)
-// .then(response => {
-
-// console.log(response);
-// sessionStorage.setItem('authentication', response.data.token)
-// BrowserHistory.push('/dashboard')
-// });
-// dispatch({type:'Login',payload:payload});
-// }
-// }
 
 

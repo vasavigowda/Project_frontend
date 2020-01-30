@@ -4,6 +4,7 @@ import BrowserHistory from '../Utils/BrowserHistory'
 import {questionHandle} from '../../Action/qusetionpageAction';
 import './Questionpage.css'
 import Nav from '../Nav/Nav';
+import Navbar from './Navbar';
 
 class Questionpage extends Component {
     constructor(props) {
@@ -32,8 +33,8 @@ class Questionpage extends Component {
         }
         else {
         BrowserHistory.push('/dashboard')
-        }
         this.props.questionHandle(payload);
+        }
         } 
     render() {
         return (
@@ -44,7 +45,7 @@ class Questionpage extends Component {
              <p  className="errorMsg " >{this.state.texterror}</p><br/>
           <button onClick={this.onHandleClick} className="button2"><b>Enter</b></button>
           </div>
-          <Nav/>
+       <Navbar/> 
             </div> 
         );
     }

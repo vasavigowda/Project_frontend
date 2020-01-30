@@ -1,17 +1,25 @@
 .searchpage{
-    background:url('../Images/img4.jpg');
+    background:url('../Images/imag9.jpg');
     background-size:cover;
     background-image: no-repeat;
-    
+ 
 }
+/* .search{
+    background:rgba(201, 181, 181, 0.582);
+} */
 .inputfieldsearch{
     margin-top:8%;
-    margin-left: 3%;
-    
+    margin-left: 3%;    
 }
 .logintable{
-    color: red;
+    color: #063f5c;
     margin-top: 5%;
     margin-left: 41%;
     margin-bottom: 100px;
+}
+.tableheading{
+    color: black;
+}
+.tabledata{
+    color: black;
 }
